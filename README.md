@@ -12,12 +12,12 @@ Features:
 * Keeps the container alive forever
 * Ports are exposed
 
-To use spark for local development:
+To use spark for local development (also write a host name entry for spark:
 ```
-docker run --name spark -d -p 8080:8080 -p 8081:8081 -p 7077:7077 -p 9001:9001 starofall/spark-standalone
+docker run --name spark --hostname spark -d -p 8080:8080 -p 8081:8081 -p 7077:7077 -p 9001:9001 starofall/spark-standalone
 ```
 
 If you want to link it to another container just use:
 ```
-docker run --name spark -d starofall/spark-standalone
+docker run --name spark --hostname spark -d starofall/spark-standalone
 ```
